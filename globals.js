@@ -11,9 +11,8 @@ configFiles.forEach(function(file) {
     } catch (e) {
         throw 'Config file ' + file + '.config is not a legit JSON';
     }
-    var configName = file.replace('.config', '');
+    var configName = file.replace('.json', '');
     if (!global.config[configName]) global.config[configName] = {};
     _.extend(global.config[configName], config);
-    console.log(global.config)
 });
 
