@@ -15,4 +15,3 @@ configFiles.forEach(function(file) {
     if (!global.config[configName]) global.config[configName] = {};
     _.extend(global.config[configName], config);
 });
-

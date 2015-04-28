@@ -5,7 +5,7 @@ var http = require('http');
 
 // Create and define express server
 var app = express();
-app.set('port', global.config.server.port || 8080);
+app.set('port', global.config.server.port || 80);
 
 // Create server and listen on port
 http.createServer(app)
@@ -23,9 +23,12 @@ app.get('/', function(req, res){
 
 app.get('/:model', function(req, res){
     if (!models[req.params.model]) exports.handleResponse(req, res, {message: 'Incorrect API module '+req.params.module, error: 'CallException', code: 401});
-    else
+    else {
         models[req.params.model](req.params, function(err, data){
         });
+        console.log('Received request for '+req.params.model);
+    }
+
 });
 
 

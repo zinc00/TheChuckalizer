@@ -8,7 +8,7 @@
 
     <!-- Important scripts and styles -->
     <script type="text/javascript" src="scripts/script.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
 
@@ -16,7 +16,46 @@
 </head>
 
 <body>
-    <button class="btn btn-primary"> Press </button>
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="inner cover">
+                <div class="title"> <img src="images/title.PNG" alt="The Chuckalizer"></div>
+                    <div class="row">
+
+                        <div class="col-md-2">Enter First Name:</div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Chuck">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">Enter Last Name:</div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Norris">
+                        </div>
+
+                    </div>
+                <p></p>
+                    <div class="row">
+                        <button class="btn btn-primary" onclick="callAPI()"> Get Quote! </button>
+                    </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
 </body>
 
 
