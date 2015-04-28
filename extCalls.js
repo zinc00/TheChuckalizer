@@ -17,6 +17,10 @@ exports.httpCall = function(host, port, path, params, cb){
         headers: params.headers
     };
 
+    var handleError = function(err){
+        cb('Error on extCalls.httpCall: '+err);
+    };
+
     http.request(options, function(res){
         var str = '';
 
@@ -31,8 +35,5 @@ exports.httpCall = function(host, port, path, params, cb){
             cb(null, str);
         });
     }).on('error', handleError).end();
-};
 
-var handleError = function(err){
-    cb('Error on extCalls.httpCall: '+err);
 };

@@ -1,5 +1,5 @@
 var icndb = require('./extApi/ICNDB.js');
 
-exports.cnQuote = function(params, callback){
-    icndb.quote(params, callback)
+exports.quote = function(params, callback){
+    icndb.quote(params, callback);
 };

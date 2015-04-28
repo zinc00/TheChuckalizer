@@ -14,7 +14,7 @@ exports.quote = function(params, cb){
         } catch(e) {
             return cb('Error parsing response from '+apiHost+', response was: '+result);
         }
-        if (!result.value || !result.value.length) return cb('No response or response is empty, from '+apiHost+', response was: '+result);
+        if (!result.value) return cb('No response or response is empty, from '+apiHost+', response was: '+result);
         return cb(null, result.value.joke);
     });
 };

@@ -22,11 +22,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/:model', function(req, res){
-    if (!models[req.params.model]) exports.handleResponse(req, res, {message: 'Incorrect API module '+req.params.module, error: 'CallException', code: 401});
+    if (!models[req.params.model]) exports.handleResponse(req, res, {message: 'Incorrect API module: '+req.params.module, error: 'CallException', code: 401});
     else {
         models[req.params.model](req.params, function(err, data){
+            exports.handleResponse(req, res, null, data);
         });
-        console.log('Received request for '+req.params.model);
     }
 
 });

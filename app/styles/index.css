@@ -9,9 +9,8 @@ body {
     background-size : 100% auto;
     background-color: #dbdbdb;
     background-opacity: 0.4;
-    color: rgba(82,82,122,0.5);;
+    color: rgb(0, 0, 0);;
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 .site-wrapper {
     display: table;
