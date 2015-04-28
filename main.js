@@ -30,9 +30,7 @@ app.get('/:model', function(req, res){
             exports.handleResponse(req, res, null, data);
         });
     }
-
 });
-
 
 // Handle responses
 exports.handleResponse = function(req, res, err, data) {
