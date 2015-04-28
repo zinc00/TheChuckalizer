@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c062101-ece7-4718-9640-b36c965a37b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/procfile.txt" />
+      <change type="MOVED" beforePath="C:\Users\user\PhpstormProjects\TheChuckalizer\procfile.txt" afterPath="$PROJECT_DIR$/Procfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TheChuckalizer.iws" />
@@ -37,8 +37,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="procfile.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/procfile.txt">
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
               <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
@@ -397,7 +397,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430255248234</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added procfile for heroku">
+      <created>1430256395835</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1430256395835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -442,7 +448,8 @@
     </option>
     <MESSAGE value="fixed bugs in globals, and dependency problems" />
     <MESSAGE value="work in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
+    <MESSAGE value="added procfile for heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="added procfile for heroku" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -656,7 +663,7 @@
         <state vertical-scroll-proportion="-0.46258503" vertical-offset="272" max-vertical-offset="26418">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,7 +748,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/procfile.txt">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
