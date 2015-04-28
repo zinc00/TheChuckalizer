@@ -1,23 +1,7 @@
+require('./globals.js');
 var express = require('express');
-var _ = require('underscore');
 var models = require('./models.js');
 var http = require('http');
-var fs = require('fs');
-
-//Load config files as globals
-global.config = {};
-var configFiles = fs.readdirSync(__dirname + '/config/');
-configFiles.forEach(function(file) {
-    var config = fs.readFileSync(__dirname + '/config/' + file);
-    try {
-        config = JSON.parse(config);
-    } catch (e) {
-        throw 'Config file ' + file + '.config is not a legit JSON';
-    }
-    var configName = file.replace('.config', '');
-    if (!global.config[configName]) global.config[configName] = {};
-    _.extend(global.config[configName], config);
-});
 
 // Create and define express server
 var app = express();
@@ -29,12 +13,18 @@ http.createServer(app)
         console.log('TheChuckalizer server is listening on port ' + app.get('port'));
     });
 
+//make app public
+app.use(express.static(__dirname+'/app'));
+
 // Define routes
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/app/index.html');
+});
+
 app.get('/:model', function(req, res){
     if (!models[req.params.model]) exports.handleResponse(req, res, {message: 'Incorrect API module '+req.params.module, error: 'CallException', code: 401});
     else
         models[req.params.model](req.params, function(err, data){
-
         });
 });
 
