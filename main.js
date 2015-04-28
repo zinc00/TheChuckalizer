@@ -2,6 +2,7 @@ require('./globals.js');
 var express = require('express');
 var models = require('./models.js');
 var http = require('http');
+var _ = require('underscore');
 
 // Create and define express server
 var app = express();
@@ -24,6 +25,7 @@ app.get('/', function(req, res){
 app.get('/:model', function(req, res){
     if (!models[req.params.model]) exports.handleResponse(req, res, {message: 'Incorrect API module: '+req.params.module, error: 'CallException', code: 401});
     else {
+        if (req.query) _.extend(req.params, req.query);
         models[req.params.model](req.params, function(err, data){
             exports.handleResponse(req, res, null, data);
         });
