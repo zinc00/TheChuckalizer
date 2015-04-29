@@ -6,7 +6,7 @@ var _ = require('underscore');
 
 // Create and define express server
 var app = express();
-app.set('port', global.config.server.port || 80);
+app.set('port', global.config.server.port || 8080);
 
 // Create server and listen on port
 http.createServer(app)
